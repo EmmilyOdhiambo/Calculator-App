@@ -12,16 +12,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         addNumbers()
-        substractionNumbers()
+        subtractionNumbers()
         remainderNumbers()
         multiplicationNumbers()
     }
     fun addNumbers(){
         var sumNum1=findViewById<EditText>(R.id.number1)
         var sumNum2=findViewById<EditText>(R.id.number2)
-        var button1=findViewById<Button>(R.id.btn_add)
-        button1.setOnClickListener {
+        var button=findViewById<Button>(R.id.btn_add)
+        button.setOnClickListener {
             var addNum1=sumNum1.text.toString().toInt()
             var addNum2=sumNum2.text.toString().toInt()
             var answer=addNum1+addNum2
@@ -31,8 +32,8 @@ class MainActivity : AppCompatActivity() {
     fun remainderNumbers(){
         var remNum1=findViewById<EditText>(R.id.number1)
         var remNum2=findViewById<EditText>(R.id.number2)
-        var button2=findViewById<Button>(R.id.btn_div)
-        button2.setOnClickListener {
+        var button=findViewById<Button>(R.id.btn_div)
+        button.setOnClickListener {
             var remNum1=remNum1.text.toString().toInt()
             var remNum2=remNum2.text.toString().toInt()
             var answer=remNum1%remNum2
@@ -42,22 +43,22 @@ class MainActivity : AppCompatActivity() {
     fun multiplicationNumbers(){
         var multiplyNum1=findViewById<EditText>(R.id.number1)
         var multiplyNum2=findViewById<EditText>(R.id.number2)
-        var button3=findViewById<Button>(R.id.btn_div)
-        button3.setOnClickListener {
+        var button=findViewById<Button>(R.id.btn_mul)
+        button.setOnClickListener {
             var multiplication1=multiplyNum1.text.toString().toInt()
             var multiplication2=multiplyNum2.text.toString().toInt()
             var answer=multiplication1*multiplication2
             Toast.makeText(this,"$answer",Toast.LENGTH_SHORT).show()
         }
     }
-    fun substractionNumbers(){
-        var substractNum1=findViewById<EditText>(R.id.number1)
-        var substractNum2=findViewById<EditText>(R.id.number2)
-        var button4=findViewById<Button>(R.id.btn_div)
-        button4.setOnClickListener {
-            var substraction1=substractNum1.text.toString().toInt()
-            var substraction2=substractNum2.text.toString().toInt()
-            var answer=substraction1-substraction2
+    fun subtractionNumbers(){
+        var subtractNum1=findViewById<EditText>(R.id.number1)
+        var subtractNum2=findViewById<EditText>(R.id.number2)
+        var button=findViewById<Button>(R.id.btn_sub)
+        button.setOnClickListener {
+            var subtraction1=subtractNum1.text.toString().toInt()
+            var subtraction2=subtractNum2.text.toString().toInt()
+            var answer=subtraction1-subtraction2
             Toast.makeText(this,"$answer",Toast.LENGTH_SHORT).show()
         }
     }
